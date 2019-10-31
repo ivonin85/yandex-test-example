@@ -1,0 +1,514 @@
+[
+  {
+    "line": 4,
+    "elements": [
+      {
+        "line": 19,
+        "name": "тестиируем поиск яндекс маркет",
+        "description": "",
+        "id": "тестиируем-поиск-яндекс-маркет;тестиируем-поиск-яндекс-маркет;;2",
+        "type": "scenario",
+        "keyword": "Структура сценария",
+        "steps": [
+          {
+            "result": {
+              "duration": 11445164300,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "Яндекс - Открываем сайт",
+            "match": {
+              "location": "YandexSteps.яндекс_Открываем_сайт()"
+            },
+            "keyword": "Допустим "
+          },
+          {
+            "result": {
+              "duration": 7054503000,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "Яндекс - Переходим в Яедекс \"Маркет\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Маркет",
+                  "offset": 29
+                }
+              ],
+              "location": "YandexSteps.яндекс_Переходим_в_Яедекс(String)"
+            },
+            "keyword": "И "
+          },
+          {
+            "result": {
+              "duration": 4668970800,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "Яндекс Маркет каталог - Выбираем категорию \"Компьютерная техника\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Компьютерная техника",
+                  "offset": 44
+                }
+              ],
+              "location": "YandexMarketCatalogSteps.яндекс_Маркет_каталог_Выбираем_категорию(String)"
+            },
+            "keyword": "И "
+          },
+          {
+            "result": {
+              "duration": 14065603500,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "Яндекс Маркет подкаталог - Выбираем подкатегорию \"Планшеты\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Планшеты",
+                  "offset": 50
+                }
+              ],
+              "location": "YandexMarketSubCatalogSteps.яндекс_Маркет_подкаталог_Выбираем_подкатегорию(String)"
+            },
+            "keyword": "И "
+          },
+          {
+            "result": {
+              "duration": 3633120100,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "Яндекс Маркет подкаталог - Добавляем фильтр по производителю \"Apple\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Apple",
+                  "offset": 62
+                }
+              ],
+              "location": "YandexMarketSubCatalogSteps.яндекс_Маркет_подкаталог_Добавляем_фильтр_по_производителю(String)"
+            },
+            "keyword": "И "
+          },
+          {
+            "result": {
+              "duration": 14331364200,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "Яндекс Маркет подкаталог - Задаем параметр поиска по цене от \"20000\" до \"35000\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "20000",
+                  "offset": 62
+                },
+                {
+                  "val": "35000",
+                  "offset": 73
+                }
+              ],
+              "location": "YandexMarketSubCatalogSteps.яндекс_Маркет_подкаталог_Задаем_параметр_поиска_по_цене_от_до(String,String)"
+            },
+            "keyword": "И "
+          },
+          {
+            "result": {
+              "duration": 7879068400,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "Яндекс Маркет подкаталог - Запоминаем название товара под номер 2 в результате поиска",
+            "match": {
+              "arguments": [
+                {
+                  "val": "2",
+                  "offset": 64
+                }
+              ],
+              "location": "YandexMarketSubCatalogSteps.яндекс_Маркет_подкаталог_Запоминаем_название_товара_под_номер_в_результате_поиска(int)"
+            },
+            "keyword": "И "
+          },
+          {
+            "result": {
+              "duration": 8700788500,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "Яндекс Маркет подкаталог - Осуществляем поиск по запомненному названию",
+            "match": {
+              "location": "YandexMarketSubCatalogSteps.яндекс_Маркет_подкаталог_Осуществляем_поиск_по_запомненному_названию()"
+            },
+            "keyword": "И "
+          },
+          {
+            "result": {
+              "error_message": "org.junit.ComparisonFailure: expected:\u003c...ншет Apple iPad (201[9]) 32Gb Wi-Fi\u003e but was:\u003c...ншет Apple iPad (201[8]) 32Gb Wi-Fi\u003e\r\n\tat org.junit.Assert.assertEquals(Assert.java:115)\r\n\tat org.junit.Assert.assertEquals(Assert.java:144)\r\n\tat pages.YandexMarketSubCatalog.compareData(YandexMarketSubCatalog.java:52)\r\n\tat steps.YandexMarketSubCatalogSteps.яндекс_Маркет_подкаталог_Проверяем_что_наименование_товара_соответствует_запомненному(YandexMarketSubCatalogSteps.java:36)\r\n\tat ✽.Яндекс Маркет подкаталог - Проверяем что наименование товара соответствует запомненному(src/test/cucumber/yandex-market.feature:15)\r\n",
+              "duration": 526791600,
+              "status": "failed"
+            },
+            "line": 15,
+            "name": "Яндекс Маркет подкаталог - Проверяем что наименование товара соответствует запомненному",
+            "match": {
+              "location": "YandexMarketSubCatalogSteps.яндекс_Маркет_подкаталог_Проверяем_что_наименование_товара_соответствует_запомненному()"
+            },
+            "keyword": "И "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@prod"
+          }
+        ]
+      },
+      {
+        "line": 20,
+        "name": "тестиируем поиск яндекс маркет",
+        "description": "",
+        "id": "тестиируем-поиск-яндекс-маркет;тестиируем-поиск-яндекс-маркет;;3",
+        "type": "scenario",
+        "keyword": "Структура сценария",
+        "steps": [
+          {
+            "result": {
+              "duration": 2726183900,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "Яндекс - Открываем сайт",
+            "match": {
+              "location": "YandexSteps.яндекс_Открываем_сайт()"
+            },
+            "keyword": "Допустим "
+          },
+          {
+            "result": {
+              "duration": 6286044200,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "Яндекс - Переходим в Яедекс \"Маркет\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Маркет",
+                  "offset": 29
+                }
+              ],
+              "location": "YandexSteps.яндекс_Переходим_в_Яедекс(String)"
+            },
+            "keyword": "И "
+          },
+          {
+            "result": {
+              "duration": 3355460700,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "Яндекс Маркет каталог - Выбираем категорию \"Компьютерная техника\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Компьютерная техника",
+                  "offset": 44
+                }
+              ],
+              "location": "YandexMarketCatalogSteps.яндекс_Маркет_каталог_Выбираем_категорию(String)"
+            },
+            "keyword": "И "
+          },
+          {
+            "result": {
+              "duration": 15013599500,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "Яндекс Маркет подкаталог - Выбираем подкатегорию \"Ноутбуки\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Ноутбуки",
+                  "offset": 50
+                }
+              ],
+              "location": "YandexMarketSubCatalogSteps.яндекс_Маркет_подкаталог_Выбираем_подкатегорию(String)"
+            },
+            "keyword": "И "
+          },
+          {
+            "result": {
+              "duration": 3604547800,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "Яндекс Маркет подкаталог - Добавляем фильтр по производителю \"HP\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "HP",
+                  "offset": 62
+                }
+              ],
+              "location": "YandexMarketSubCatalogSteps.яндекс_Маркет_подкаталог_Добавляем_фильтр_по_производителю(String)"
+            },
+            "keyword": "И "
+          },
+          {
+            "result": {
+              "duration": 14942961100,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "Яндекс Маркет подкаталог - Задаем параметр поиска по цене от \"45000\" до \"90000\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "45000",
+                  "offset": 62
+                },
+                {
+                  "val": "90000",
+                  "offset": 73
+                }
+              ],
+              "location": "YandexMarketSubCatalogSteps.яндекс_Маркет_подкаталог_Задаем_параметр_поиска_по_цене_от_до(String,String)"
+            },
+            "keyword": "И "
+          },
+          {
+            "result": {
+              "duration": 29420546700,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "Яндекс Маркет подкаталог - Запоминаем название товара под номер 2 в результате поиска",
+            "match": {
+              "arguments": [
+                {
+                  "val": "2",
+                  "offset": 64
+                }
+              ],
+              "location": "YandexMarketSubCatalogSteps.яндекс_Маркет_подкаталог_Запоминаем_название_товара_под_номер_в_результате_поиска(int)"
+            },
+            "keyword": "И "
+          },
+          {
+            "result": {
+              "duration": 8402686400,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "Яндекс Маркет подкаталог - Осуществляем поиск по запомненному названию",
+            "match": {
+              "location": "YandexMarketSubCatalogSteps.яндекс_Маркет_подкаталог_Осуществляем_поиск_по_запомненному_названию()"
+            },
+            "keyword": "И "
+          },
+          {
+            "result": {
+              "error_message": "org.junit.ComparisonFailure: expected:\u003cНоутбук HP 250 G[6]\u003e but was:\u003cНоутбук HP 250 G[7]\u003e\r\n\tat org.junit.Assert.assertEquals(Assert.java:115)\r\n\tat org.junit.Assert.assertEquals(Assert.java:144)\r\n\tat pages.YandexMarketSubCatalog.compareData(YandexMarketSubCatalog.java:52)\r\n\tat steps.YandexMarketSubCatalogSteps.яндекс_Маркет_подкаталог_Проверяем_что_наименование_товара_соответствует_запомненному(YandexMarketSubCatalogSteps.java:36)\r\n\tat ✽.Яндекс Маркет подкаталог - Проверяем что наименование товара соответствует запомненному(src/test/cucumber/yandex-market.feature:15)\r\n",
+              "duration": 622776500,
+              "status": "failed"
+            },
+            "line": 15,
+            "name": "Яндекс Маркет подкаталог - Проверяем что наименование товара соответствует запомненному",
+            "match": {
+              "location": "YandexMarketSubCatalogSteps.яндекс_Маркет_подкаталог_Проверяем_что_наименование_товара_соответствует_запомненному()"
+            },
+            "keyword": "И "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@prod"
+          }
+        ]
+      },
+      {
+        "line": 21,
+        "name": "тестиируем поиск яндекс маркет",
+        "description": "",
+        "id": "тестиируем-поиск-яндекс-маркет;тестиируем-поиск-яндекс-маркет;;4",
+        "type": "scenario",
+        "keyword": "Структура сценария",
+        "steps": [
+          {
+            "result": {
+              "duration": 4537892700,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "Яндекс - Открываем сайт",
+            "match": {
+              "location": "YandexSteps.яндекс_Открываем_сайт()"
+            },
+            "keyword": "Допустим "
+          },
+          {
+            "result": {
+              "duration": 9816007400,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "Яндекс - Переходим в Яедекс \"Маркет\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Маркет",
+                  "offset": 29
+                }
+              ],
+              "location": "YandexSteps.яндекс_Переходим_в_Яедекс(String)"
+            },
+            "keyword": "И "
+          },
+          {
+            "result": {
+              "duration": 5534198100,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "Яндекс Маркет каталог - Выбираем категорию \"Компьютерная техника\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Компьютерная техника",
+                  "offset": 44
+                }
+              ],
+              "location": "YandexMarketCatalogSteps.яндекс_Маркет_каталог_Выбираем_категорию(String)"
+            },
+            "keyword": "И "
+          },
+          {
+            "result": {
+              "duration": 13603815000,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "Яндекс Маркет подкаталог - Выбираем подкатегорию \"Настольные\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Настольные",
+                  "offset": 50
+                }
+              ],
+              "location": "YandexMarketSubCatalogSteps.яндекс_Маркет_подкаталог_Выбираем_подкатегорию(String)"
+            },
+            "keyword": "И "
+          },
+          {
+            "result": {
+              "duration": 2477799600,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "Яндекс Маркет подкаталог - Добавляем фильтр по производителю \"MSI\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "MSI",
+                  "offset": 62
+                }
+              ],
+              "location": "YandexMarketSubCatalogSteps.яндекс_Маркет_подкаталог_Добавляем_фильтр_по_производителю(String)"
+            },
+            "keyword": "И "
+          },
+          {
+            "result": {
+              "duration": 13313284100,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "Яндекс Маркет подкаталог - Задаем параметр поиска по цене от \"80000\" до \"100000\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "80000",
+                  "offset": 62
+                },
+                {
+                  "val": "100000",
+                  "offset": 73
+                }
+              ],
+              "location": "YandexMarketSubCatalogSteps.яндекс_Маркет_подкаталог_Задаем_параметр_поиска_по_цене_от_до(String,String)"
+            },
+            "keyword": "И "
+          },
+          {
+            "result": {
+              "duration": 19746982900,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "Яндекс Маркет подкаталог - Запоминаем название товара под номер 2 в результате поиска",
+            "match": {
+              "arguments": [
+                {
+                  "val": "2",
+                  "offset": 64
+                }
+              ],
+              "location": "YandexMarketSubCatalogSteps.яндекс_Маркет_подкаталог_Запоминаем_название_товара_под_номер_в_результате_поиска(int)"
+            },
+            "keyword": "И "
+          },
+          {
+            "result": {
+              "duration": 21046342900,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "Яндекс Маркет подкаталог - Осуществляем поиск по запомненному названию",
+            "match": {
+              "location": "YandexMarketSubCatalogSteps.яндекс_Маркет_подкаталог_Осуществляем_поиск_по_запомненному_названию()"
+            },
+            "keyword": "И "
+          },
+          {
+            "result": {
+              "error_message": "org.junit.ComparisonFailure: expected:\u003c...льный компьютер MSI [Trident 3 8RD-035RU (9S6-B92011-035) Mini-Tower/Intel Core i7-8700/16 ГБ/256 ГБ SSD/1024 ГБ HDD/NVIDIA GeForce GTX 107]0/Windows 10 Home\u003e but was:\u003c...льный компьютер MSI [Aegis 3 8RC-206RU (9S6-B91811-206) Midi-Tower/Intel Core i7-8700/8 ГБ/128 ГБ SSD/1024 ГБ HDD/NVIDIA GeForce GTX 106]0/Windows 10 Home\u003e\r\n\tat org.junit.Assert.assertEquals(Assert.java:115)\r\n\tat org.junit.Assert.assertEquals(Assert.java:144)\r\n\tat pages.YandexMarketSubCatalog.compareData(YandexMarketSubCatalog.java:52)\r\n\tat steps.YandexMarketSubCatalogSteps.яндекс_Маркет_подкаталог_Проверяем_что_наименование_товара_соответствует_запомненному(YandexMarketSubCatalogSteps.java:36)\r\n\tat ✽.Яндекс Маркет подкаталог - Проверяем что наименование товара соответствует запомненному(src/test/cucumber/yandex-market.feature:15)\r\n",
+              "duration": 1762962500,
+              "status": "failed"
+            },
+            "line": 15,
+            "name": "Яндекс Маркет подкаталог - Проверяем что наименование товара соответствует запомненному",
+            "match": {
+              "location": "YandexMarketSubCatalogSteps.яндекс_Маркет_подкаталог_Проверяем_что_наименование_товара_соответствует_запомненному()"
+            },
+            "keyword": "И "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@prod"
+          }
+        ]
+      }
+    ],
+    "name": "тестиируем поиск яндекс маркет",
+    "description": "",
+    "id": "тестиируем-поиск-яндекс-маркет",
+    "keyword": "Функция",
+    "uri": "src/test/cucumber/yandex-market.feature",
+    "tags": [
+      {
+        "name": "@prod",
+        "type": "Tag",
+        "location": {
+          "line": 2,
+          "column": 1
+        }
+      }
+    ]
+  }
+]

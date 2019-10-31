@@ -1,6 +1,6 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("src/test/cucumber/test.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("src/test/cucumber/yandex-market.feature");
 formatter.feature({
-  "name": "загрузка файлов в категонию Продукты",
+  "name": "тестиируем поиск яндекс маркет",
   "description": "",
   "keyword": "Функция",
   "tags": [
@@ -10,7 +10,7 @@ formatter.feature({
   ]
 });
 formatter.scenarioOutline({
-  "name": "Проверяем загрузку файлов",
+  "name": "тестиируем поиск яндекс маркет",
   "description": "",
   "keyword": "Структура сценария"
 });
@@ -76,16 +76,25 @@ formatter.examples({
     {
       "cells": [
         "Ноутбуки",
-        "Lenovo",
+        "HP",
         "45000",
         "90000",
+        "Компьютерная техника"
+      ]
+    },
+    {
+      "cells": [
+        "Настольные",
+        "MSI",
+        "80000",
+        "100000",
         "Компьютерная техника"
       ]
     }
   ]
 });
 formatter.scenario({
-  "name": "Проверяем загрузку файлов",
+  "name": "тестиируем поиск яндекс маркет",
   "description": "",
   "keyword": "Структура сценария",
   "tags": [
@@ -182,11 +191,11 @@ formatter.match({
   "location": "YandexMarketSubCatalogSteps.яндекс_Маркет_подкаталог_Проверяем_что_наименование_товара_соответствует_запомненному()"
 });
 formatter.result({
-  "error_message": "java.lang.IndexOutOfBoundsException: Index 0 out of bounds for length 0\r\n\tat java.base/jdk.internal.util.Preconditions.outOfBounds(Preconditions.java:64)\r\n\tat java.base/jdk.internal.util.Preconditions.outOfBoundsCheckIndex(Preconditions.java:70)\r\n\tat java.base/jdk.internal.util.Preconditions.checkIndex(Preconditions.java:248)\r\n\tat java.base/java.util.Objects.checkIndex(Objects.java:372)\r\n\tat java.base/java.util.ArrayList.get(ArrayList.java:458)\r\n\tat com.codeborne.selenide.impl.CollectionElement.getWebElement(CollectionElement.java:35)\r\n\tat com.codeborne.selenide.commands.GetText.execute(GetText.java:21)\r\n\tat com.codeborne.selenide.commands.GetText.execute(GetText.java:8)\r\n\tat com.codeborne.selenide.commands.Commands.execute(Commands.java:144)\r\n\tat com.codeborne.selenide.impl.SelenideElementProxy.dispatchAndRetry(SelenideElementProxy.java:99)\r\n\tat com.codeborne.selenide.impl.SelenideElementProxy.invoke(SelenideElementProxy.java:65)\r\n\tat com.sun.proxy.$Proxy16.text(Unknown Source)\r\n\tat pages.YandexMarketSubCatalog.compareData(YandexMarketSubCatalog.java:53)\r\n\tat steps.YandexMarketSubCatalogSteps.яндекс_Маркет_подкаталог_Проверяем_что_наименование_товара_соответствует_запомненному(YandexMarketSubCatalogSteps.java:36)\r\n\tat ✽.Яндекс Маркет подкаталог - Проверяем что наименование товара соответствует запомненному(src/test/cucumber/test.feature:15)\r\n",
+  "error_message": "org.junit.ComparisonFailure: expected:\u003c...ншет Apple iPad (201[9]) 32Gb Wi-Fi\u003e but was:\u003c...ншет Apple iPad (201[8]) 32Gb Wi-Fi\u003e\r\n\tat org.junit.Assert.assertEquals(Assert.java:115)\r\n\tat org.junit.Assert.assertEquals(Assert.java:144)\r\n\tat pages.YandexMarketSubCatalog.compareData(YandexMarketSubCatalog.java:52)\r\n\tat steps.YandexMarketSubCatalogSteps.яндекс_Маркет_подкаталог_Проверяем_что_наименование_товара_соответствует_запомненному(YandexMarketSubCatalogSteps.java:36)\r\n\tat ✽.Яндекс Маркет подкаталог - Проверяем что наименование товара соответствует запомненному(src/test/cucumber/yandex-market.feature:15)\r\n",
   "status": "failed"
 });
 formatter.scenario({
-  "name": "Проверяем загрузку файлов",
+  "name": "тестиируем поиск яндекс маркет",
   "description": "",
   "keyword": "Структура сценария",
   "tags": [
@@ -208,4 +217,183 @@ formatter.result({
 formatter.step({
   "name": "Яндекс - Переходим в Яедекс \"Маркет\"",
   "keyword": "И "
+});
+formatter.match({
+  "location": "YandexSteps.яндекс_Переходим_в_Яедекс(String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "Яндекс Маркет каталог - Выбираем категорию \"Компьютерная техника\"",
+  "keyword": "И "
+});
+formatter.match({
+  "location": "YandexMarketCatalogSteps.яндекс_Маркет_каталог_Выбираем_категорию(String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "Яндекс Маркет подкаталог - Выбираем подкатегорию \"Ноутбуки\"",
+  "keyword": "И "
+});
+formatter.match({
+  "location": "YandexMarketSubCatalogSteps.яндекс_Маркет_подкаталог_Выбираем_подкатегорию(String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "Яндекс Маркет подкаталог - Добавляем фильтр по производителю \"HP\"",
+  "keyword": "И "
+});
+formatter.match({
+  "location": "YandexMarketSubCatalogSteps.яндекс_Маркет_подкаталог_Добавляем_фильтр_по_производителю(String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "Яндекс Маркет подкаталог - Задаем параметр поиска по цене от \"45000\" до \"90000\"",
+  "keyword": "И "
+});
+formatter.match({
+  "location": "YandexMarketSubCatalogSteps.яндекс_Маркет_подкаталог_Задаем_параметр_поиска_по_цене_от_до(String,String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "Яндекс Маркет подкаталог - Запоминаем название товара под номер 2 в результате поиска",
+  "keyword": "И "
+});
+formatter.match({
+  "location": "YandexMarketSubCatalogSteps.яндекс_Маркет_подкаталог_Запоминаем_название_товара_под_номер_в_результате_поиска(int)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "Яндекс Маркет подкаталог - Осуществляем поиск по запомненному названию",
+  "keyword": "И "
+});
+formatter.match({
+  "location": "YandexMarketSubCatalogSteps.яндекс_Маркет_подкаталог_Осуществляем_поиск_по_запомненному_названию()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "Яндекс Маркет подкаталог - Проверяем что наименование товара соответствует запомненному",
+  "keyword": "И "
+});
+formatter.match({
+  "location": "YandexMarketSubCatalogSteps.яндекс_Маркет_подкаталог_Проверяем_что_наименование_товара_соответствует_запомненному()"
+});
+formatter.result({
+  "error_message": "org.junit.ComparisonFailure: expected:\u003cНоутбук HP 250 G[6]\u003e but was:\u003cНоутбук HP 250 G[7]\u003e\r\n\tat org.junit.Assert.assertEquals(Assert.java:115)\r\n\tat org.junit.Assert.assertEquals(Assert.java:144)\r\n\tat pages.YandexMarketSubCatalog.compareData(YandexMarketSubCatalog.java:52)\r\n\tat steps.YandexMarketSubCatalogSteps.яндекс_Маркет_подкаталог_Проверяем_что_наименование_товара_соответствует_запомненному(YandexMarketSubCatalogSteps.java:36)\r\n\tat ✽.Яндекс Маркет подкаталог - Проверяем что наименование товара соответствует запомненному(src/test/cucumber/yandex-market.feature:15)\r\n",
+  "status": "failed"
+});
+formatter.scenario({
+  "name": "тестиируем поиск яндекс маркет",
+  "description": "",
+  "keyword": "Структура сценария",
+  "tags": [
+    {
+      "name": "@prod"
+    }
+  ]
+});
+formatter.step({
+  "name": "Яндекс - Открываем сайт",
+  "keyword": "Допустим "
+});
+formatter.match({
+  "location": "YandexSteps.яндекс_Открываем_сайт()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "Яндекс - Переходим в Яедекс \"Маркет\"",
+  "keyword": "И "
+});
+formatter.match({
+  "location": "YandexSteps.яндекс_Переходим_в_Яедекс(String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "Яндекс Маркет каталог - Выбираем категорию \"Компьютерная техника\"",
+  "keyword": "И "
+});
+formatter.match({
+  "location": "YandexMarketCatalogSteps.яндекс_Маркет_каталог_Выбираем_категорию(String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "Яндекс Маркет подкаталог - Выбираем подкатегорию \"Настольные\"",
+  "keyword": "И "
+});
+formatter.match({
+  "location": "YandexMarketSubCatalogSteps.яндекс_Маркет_подкаталог_Выбираем_подкатегорию(String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "Яндекс Маркет подкаталог - Добавляем фильтр по производителю \"MSI\"",
+  "keyword": "И "
+});
+formatter.match({
+  "location": "YandexMarketSubCatalogSteps.яндекс_Маркет_подкаталог_Добавляем_фильтр_по_производителю(String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "Яндекс Маркет подкаталог - Задаем параметр поиска по цене от \"80000\" до \"100000\"",
+  "keyword": "И "
+});
+formatter.match({
+  "location": "YandexMarketSubCatalogSteps.яндекс_Маркет_подкаталог_Задаем_параметр_поиска_по_цене_от_до(String,String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "Яндекс Маркет подкаталог - Запоминаем название товара под номер 2 в результате поиска",
+  "keyword": "И "
+});
+formatter.match({
+  "location": "YandexMarketSubCatalogSteps.яндекс_Маркет_подкаталог_Запоминаем_название_товара_под_номер_в_результате_поиска(int)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "Яндекс Маркет подкаталог - Осуществляем поиск по запомненному названию",
+  "keyword": "И "
+});
+formatter.match({
+  "location": "YandexMarketSubCatalogSteps.яндекс_Маркет_подкаталог_Осуществляем_поиск_по_запомненному_названию()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "Яндекс Маркет подкаталог - Проверяем что наименование товара соответствует запомненному",
+  "keyword": "И "
+});
+formatter.match({
+  "location": "YandexMarketSubCatalogSteps.яндекс_Маркет_подкаталог_Проверяем_что_наименование_товара_соответствует_запомненному()"
+});
+formatter.result({
+  "error_message": "org.junit.ComparisonFailure: expected:\u003c...льный компьютер MSI [Trident 3 8RD-035RU (9S6-B92011-035) Mini-Tower/Intel Core i7-8700/16 ГБ/256 ГБ SSD/1024 ГБ HDD/NVIDIA GeForce GTX 107]0/Windows 10 Home\u003e but was:\u003c...льный компьютер MSI [Aegis 3 8RC-206RU (9S6-B91811-206) Midi-Tower/Intel Core i7-8700/8 ГБ/128 ГБ SSD/1024 ГБ HDD/NVIDIA GeForce GTX 106]0/Windows 10 Home\u003e\r\n\tat org.junit.Assert.assertEquals(Assert.java:115)\r\n\tat org.junit.Assert.assertEquals(Assert.java:144)\r\n\tat pages.YandexMarketSubCatalog.compareData(YandexMarketSubCatalog.java:52)\r\n\tat steps.YandexMarketSubCatalogSteps.яндекс_Маркет_подкаталог_Проверяем_что_наименование_товара_соответствует_запомненному(YandexMarketSubCatalogSteps.java:36)\r\n\tat ✽.Яндекс Маркет подкаталог - Проверяем что наименование товара соответствует запомненному(src/test/cucumber/yandex-market.feature:15)\r\n",
+  "status": "failed"
+});
 });

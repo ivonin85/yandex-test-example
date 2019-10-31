@@ -7,6 +7,7 @@ import static com.codeborne.selenide.Selenide.open;
 
 public class YandexSteps {
     Yandex yandex = new Yandex();
+
     @Допустим("^Яндекс - Открываем сайт$")
     public void яндекс_Открываем_сайт() {
         open("https://yandex.ru/");
@@ -17,10 +18,5 @@ public class YandexSteps {
         yandex.selectService(service).click();
     }
 
-    public void яндекс_Маркет_Выбираем_категорию() {
 
-
-
-
-    }
 }
