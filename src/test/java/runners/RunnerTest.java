@@ -20,7 +20,7 @@ import static java.lang.Thread.sleep;
 @CucumberOptions(
         strict = true,
         format = {"pretty", "json:target/cucumber.json", "html:target/cucumber.html"},
-        features = {"src/test/cucumber/yandex-market.feature"},
+        features = {"src/test/resources/"},
         tags = {"@prod"},
         plugin = {"io.qameta.allure.cucumber2jvm.AllureCucumber2Jvm"},
         glue = {"steps"})
